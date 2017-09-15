@@ -7,8 +7,8 @@ The unavailibilty of sentinel values for C++ makes is impossible to distinguish 
 If not for pointer approach, this is impossible ( or am i missing something?) in C++, especially for a generic template based approach.
 
 c) Open addressing vs Separate Chaining for collision resolutions
-I decided to use linear probing for C++ implementation. The Python implementation uses open addressing (linked list approach). I was a tad surprised to note that the default C++ implmentation also
-uses linked list (a tad too simple). The linear probing technique is inspired by  - http://www.cs.rmit.edu.au/online/blackboard/chapter/05/documents/contribute/chapter/05/linear-probing.html
+I decided to use linear probing for C++ implementation. I was a tad surprised to note that the default C++ implmentation also
+uses linked list (a bit too simple). The linear probing technique is inspired by  - http://www.cs.rmit.edu.au/online/blackboard/chapter/05/documents/contribute/chapter/05/linear-probing.html
 
 
 Possible improvements?
