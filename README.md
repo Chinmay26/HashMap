@@ -31,3 +31,5 @@ val = hmap.get("flipboard"); \\ raises exception
 
 val = hmap.delete_key("coursera");
 ```
+
+For more documentation, refer [here.](https://github.com/Chinmay26/HashMap/blob/master/tests/Documentation)
