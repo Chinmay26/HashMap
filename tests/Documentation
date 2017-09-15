@@ -1,0 +1,35 @@
+Design decisions
+a) Templates & Functors
+Building a specific HashMap is no fun :/. I wanted a generic HashMap and hence the decision to go with templates. The user can specify their own hash fucntions based on input datatypes.
+
+b) Fixed size Hash Table: Use dynamic memory management vs fixed size arrays. 
+The unavailibilty of sentinel values for C++ makes is impossible to distinguish between valid and invalid hash locations. In other words, how do you distingush current hash location is empty or not?
+If not for pointer approach, this is impossible ( or am i missing something?) in C++, especially for a generic template based approach.
+
+c) Open addressing vs Separate Chaining for collision resolutions
+I decided to use linear probing for C++ implementation. The Python implementation uses open addressing (linked list approach). I was a tad surprised to note that the default C++ implmentation also
+uses linked list (a tad too simple). The linear probing technique is inspired by  - http://www.cs.rmit.edu.au/online/blackboard/chapter/05/documents/contribute/chapter/05/linear-probing.html
+
+
+Possible improvements?
+a) Hash Resize
+Currently the hash size is fixed. Ideally, we should dynamically reallocate memory when the load factor reaches a threshold.
+
+b) Hash Function
+The default hash functions is C++11 standard Hash function. This has scope for specific hash functions.
+
+c) HashMap function definitions
+The setter and getter function definition is not strictly C++ standard. There is a need to differentiate between sentinel values, errors and valid values.
+Ex: For Get function, there is a need to differentiate between return of valid NULL and invalid key elements.
+
+d) Exception Handling
+Scope of having polished Exception classes for better debugging.
+
+e) Better Collsion resolution
+Here, the performance of linear probing system degrades to linear search in worst case. There are several approaches for avoiding that. This is research topic in itself :)
+
+f) Better tests and packaging through CMake
+There is a need to get detailed performance tests. Collsion rate / HashMap get & setter performance times / hash table pollution performance.   
+
+
+
