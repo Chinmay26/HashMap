@@ -8,7 +8,7 @@
 #include<iostream>
 #include<cassert>
 #include<unordered_set>
-#include "../HashMap.h"
+#include "../tests/HashMap.h"
 using namespace std;
 
 struct MyHashCompute {
